@@ -6,7 +6,7 @@ import { Home } from 'pages/Home';
 import { Register } from 'pages/Register';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { refreshUser } from 'redux/auth/auth-operations';
 import { Login } from './pages/Login';
 import { Phonebook } from 'components/Phonebook/Phonebook';
@@ -49,6 +49,7 @@ export const App = () => {
           }
         />
       </Route>
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };

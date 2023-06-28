@@ -13,8 +13,11 @@ export const Login = () => {
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
-    );
-    form.reset();
+    )
+      .unwrap()
+      .then()
+      .catch(alert('The login or password is incorrect!'));
+    // form.reset();
   };
 
   return (

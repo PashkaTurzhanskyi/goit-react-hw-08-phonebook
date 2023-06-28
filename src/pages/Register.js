@@ -14,8 +14,11 @@ export const Register = () => {
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
-    );
-    form.reset();
+    )
+      .unwrap()
+      .then()
+      .catch(alert('Something went wrong, please try again!'));
+    // form.reset();
   };
 
   return (
