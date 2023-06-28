@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ContactForm } from '../ContactForm/ContactForm';
 import { ContactList } from '../ContactList/ContactList';
 import { Filter } from '../Filter/Filter';
-import { Section } from './App.styled';
+import { Section } from './Phonebook.styled';
 import { fetchContacts } from 'redux/operations';
 import { selectError, selectIsLoading } from 'redux/selectors';
 
-export const App = () => {
+export const Phonebook = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
